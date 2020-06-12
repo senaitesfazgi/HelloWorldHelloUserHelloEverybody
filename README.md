@@ -12,5 +12,7 @@ App must be written in C#
 Source code must be delivered to client
 
 Maintenance and new features to be handled by client’s nephew.
+
+Trello Board link: https://trello.com/b/cDvyvJ2Y/c-introduction-helloworld
    
 
