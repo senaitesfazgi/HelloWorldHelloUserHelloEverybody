@@ -1,14 +1,35 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
+using System.IO;
 
-namespace HelloWorldUserEB
+namespace Test_HelloWorld
 {
-    internal class program
+    public class Program
     {
-        public static ConsoleKey KeyPressed { get; internal set; }
 
-        internal static void main()
+
+        [SetUp]
+        public void Setup()
         {
-            throw new NotImplementedException();
+            HelloWorldUserEB.Program.keyPressed = ConsoleKey.Enter;
+        }
+
+        [Test]
+        public void Test1()
+        {
+            Assert.Pass();
+        }
+
+        [Test]
+        public void Test_HelloWorld()
+        {
+            string expected = "Hello World!";
+            var sw = new StringWriter();
+            Console.SetOut(sw);
+            HelloWorldUserEB.Program.Main();
+
+            var result = sw.ToString().Trim();
+            Assert.AreEqual(expected, result);
         }
     }
 }

@@ -6,14 +6,25 @@ namespace HelloWorldUserEB
     {
         public static ConsoleKey keyPressed;
 
+        public static ConsoleKey KeyPressed { get; set; }
+
         public static void Main()
         {
             Console.WriteLine("Hello World!");
-            while (keyPressed != ConsoleKey.Enter)
+            while (KeyPressed != ConsoleKey.Enter) 
             {
-                Console.WriteLine("\nPress the Enter key to end this program...");
-                keyPressed = Console.ReadKey().Key;
+                Console.WriteLine("\nPress the Enter key to end this program....");
+                KeyPressed = Console.ReadKey().Key;
+            
             }
+               
+               
+            
+        }
+
+        public static void main()
+        {
+            throw new NotImplementedException();
         }
     }
 }

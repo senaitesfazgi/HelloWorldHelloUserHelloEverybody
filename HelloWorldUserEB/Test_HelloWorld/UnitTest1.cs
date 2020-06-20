@@ -5,14 +5,14 @@ using System.IO;
 
 namespace Test_HelloWorld
 {
-    public class Tests
+    public class program
     {
         public TextWriter SW { get; private set; }
 
         [SetUp]
         public void Setup()
         {
-            HelloWorldUserEB.program.KeyPressed = ConsoleKey.Enter;
+            HelloWorldUserEB.Program.KeyPressed = ConsoleKey.Enter;
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace Test_HelloWorld
             String expected = "Hello World!";
             var sw = new StringWriter();
             Console.SetOut(SW);
-            HelloWorldUserEB.program.main();
+            HelloWorldUserEB.Program.main();
             var result = sw.ToString().Trim();
             Assert.AreEqual(expected, result);
         }
